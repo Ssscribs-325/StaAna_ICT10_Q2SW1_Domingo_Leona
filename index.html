@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jedaibashi High School Arts Club</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js">
+    </script>
+
+    <style>
+        body {
+            background: #f0f4f8;
+            background-image: url(images.jpeg);
+            font-family: Arial, sans-serif;
+            color: #243247;
+        }
+
+        .header {
+            background: #173b67;
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .main-card {
+            max-width: 850px;
+            margin: 35px auto;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px #00000012;
+        }
+
+        .section-title {
+            color: #173b67;
+            font-weight: bold;
+        }
+
+        .member-list {
+            background: #f8fafc;
+            border-radius: 10px;
+            min-height: 80px;
+            padding: 18px;
+        }
+
+        .member-item {
+            background: white;
+            border: 1px solid #dbe4ee;
+            border-radius: 8px;
+            padding: 10px 14px;
+            margin-bottom: 8px;
+        }
+
+        .total-box {
+            background: #e3efff;
+            color: #173b67;
+            padding: 18px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .btn-add {
+            background: #173b67;
+            color: white;
+        }
+
+        .btn-add:hover {
+            background: #24558b;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            color: #64748b;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Jedaibashi High School Arts Club</h1>
+        <p class="mb-0">Club Member Verification</p>
+        <p class="mb-0">(A fictional school club from the Blue Period manga/anime)</p>
+    </header>
+
+    <main class="container">
+        <div class="card main-card">
+            <div class="card-body p-4 p-md-5">
+
+                <h2 class="section-title h4 mb-3">Add a New Member</h2>
+                <p class="text-secondary">
+                    Enter the student's first name and last name below.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="first-name" class="form-label">
+                            First Name
+                        </label>
+                        <input
+                            type="text"
+                            id="first-name"
+                            class="form-control"
+                            placeholder="ex: Yatora"
+                        >
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="last-name" class="form-label">
+                            Last Name
+                        </label>
+                        <input
+                            type="text"
+                            id="last-name"
+                            class="form-control"
+                            placeholder="ex: Yaguchi"
+                        >
+                    </div>
+
+                    <div class="col-12">
+                    <button
+                            type="button"
+                            class="btn btn-add w-100 py-2"
+                            py-click="candidate_checker">
+                            Check Membership
+                    </button>
+                    </div>
+                </div>
+
+                <div id="message"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p style="color:aliceblue"class="mb-0">"I finally felt like my art could swallow me whole." -Yatora</p>
+    </footer>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>
